@@ -32,10 +32,7 @@ jobs:
         run: cp a.txt copy.txt -f
       - name: show file after cp
         run: cat copy.txt
-      - name: commit & push
-        run: |
-          git add copy.txt
-          git commit -m 'auto commit'
-          git push
-      
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply copy
 
