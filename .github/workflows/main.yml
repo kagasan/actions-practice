@@ -32,5 +32,10 @@ jobs:
         run: cp a.txt copy.txt -f
       - name: show file after cp
         run: cat copy.txt
+      - name: commit & push
+        run: |
+          git add copy.txt
+          git commit -m 'auto commit'
+          git push
       
 
